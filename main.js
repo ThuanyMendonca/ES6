@@ -1,13 +1,9 @@
-// Template literals => incluir variaveis dentro de string
-const nome = 'Thuany';
-const idade = 22;
+// import { soma, sub } from './funcoes';
+// import somaFunction from './soma'; Aqui tem o export default
+import { soma as somarFuncoes, sub } from './funcoes';
+// import soma, { sub } from './funcoes'; Aqui o sub esta sem default no export 
 
-console.log(`Meu nome é: ${nome} e tenho ${idade} anos.`);
-
-// Sintaxe curta de objeto
-const usuario = {
-    // quando o nome da propriedade é igual do objeto, não precisa repetir
-    nome,
-    idade,
-    teste: 'Teste'
-}
+// console.log(somaFunction(1,2));
+// console.log(sub(5,4))
+console.log(somarFuncoes(5,5));
+console.log(sub(8,3));
