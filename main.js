@@ -1,28 +1,13 @@
-// REST (pega o resto das propriedades)
+// Template literals => incluir variaveis dentro de string
+const nome = 'Thuany';
+const idade = 22;
 
+console.log(`Meu nome é: ${nome} e tenho ${idade} anos.`);
+
+// Sintaxe curta de objeto
 const usuario = {
-    nome: 'Thuany',
-    idade: 22,
-    empresa: 'StartPDV'
-};
-
-const { nome, ...resto } = usuario;
-//Imprimiu Thuanys
-console.log(nome);
-// Imprimiu idade: 22, empresa: StartPDV
-console.log(resto);
-
-const arr = [1,2,3,4];
-const [ a, b, ...c ] = arr;
-console.log(a);
-console.log(b);
-console.log(c);
-
-// function soma(...params){
-//     return params.reduce((total, next)=> total + next);
-// }
-// ou
-function soma(a,b, ...params){
-    return params.reduce((total, next) => total + next);
+    // quando o nome da propriedade é igual do objeto, não precisa repetir
+    nome,
+    idade,
+    teste: 'Teste'
 }
-console.log(soma(1,3,4));
