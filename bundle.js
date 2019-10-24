@@ -158,3 +158,55 @@ var find = arr.find(function (item) {
   return item === 4; // se não acha, ele retorna undefined
 });
 console.log(find);
+var ar = [1, 3, 4, 5, 6]; // const novoArr = ar.map(function(item){
+//     return item * 2;
+// });
+// Arrow Function
+
+var novoArr = ar.map(function (item) {
+  return item * 2;
+});
+console.log(novoArr); // Quando a function retorna apenas uma linha pode fazer:
+
+var meuArray = ar.map(function (item) {
+  return item * 2;
+});
+console.log(meuArray); // Não funciona para objeto
+
+var meuTeste = function meuTeste() {
+  return [1, 2, 3];
+}; // Funciona
+
+
+var comReturn = function comReturn() {
+  return {
+    nome: 'Objeto'
+  };
+}; // Assim funciona
+
+
+var comObj = function comObj() {
+  return {
+    nome: 'Thuany'
+  };
+};
+
+console.log(meuTeste()); // Valores padrão para os parametros (valor padrão quando não passa todos os parametros)
+
+function somar() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+}
+
+console.log(somar(1));
+console.log(soma());
+
+var vouSomar = function vouSomar() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+};
+
+console.log(vouSomar(1));
+console.log(vouSomar());

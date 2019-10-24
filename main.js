@@ -108,6 +108,46 @@ const find = arr.find(function(item){
 });
 console.log(find)
 
+const ar = [1,3,4,5,6]
+
+// const novoArr = ar.map(function(item){
+//     return item * 2;
+// });
+
+// Arrow Function
+const novoArr = ar.map((item)=>{
+    return item * 2;
+});
+console.log(novoArr);
+
+// Quando a function retorna apenas uma linha pode fazer:
+const meuArray = ar.map(item => item * 2)
+console.log(meuArray)
+
+// Não funciona para objeto
+const meuTeste = () => [1,2,3]
+
+// Funciona
+const comReturn = () =>{
+    return { nome: 'Objeto'}
+} 
+
+// Assim funciona
+const comObj = () => ({ nome: 'Thuany' });
+
+console.log(meuTeste());
+
+// Valores padrão para os parametros (valor padrão quando não passa todos os parametros)
+function somar(a = 3, b = 6){
+    return a + b;
+}
+console.log(somar(1));
+console.log(soma());
+
+const vouSomar = (a = 3, b = 6) => a + b;
+console.log(vouSomar(1));
+console.log(vouSomar());
+
 
 
 
