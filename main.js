@@ -74,6 +74,41 @@ function teste (x){
 teste(10)
 //console.log(y) // Aparece como não definido
 
+const arr = [1,3,4,5,8,9]
+// map -> percorrer o vetor e retornar algo
+
+// item é 1,3,4,5,8,9
+// index posicao do elemento no vetor
+const newArr = arr.map(function(item, index){
+    return item + index;
+});
+console.log(newArr);
+
+// Transforma o vetor e uma unica variavel
+// total 0 e o next 1
+const sum = arr.reduce(function(total, next){
+    return total + next;
+    // total = 0 next = 1
+    // total = 1 next = 3
+    // total = 4 next = 4
+});
+console.log(sum)
+
+// Filter
+const filter = arr.filter(function(item){
+    // retornar true ou false
+    // retorna apenas os números pares
+    return item % 2 === 0
+});
+console.log(filter)
+
+// Find
+const find = arr.find(function(item){
+    return item === 4; // se não acha, ele retorna undefined
+});
+console.log(find)
+
+
 
 
 
