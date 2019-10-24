@@ -126,7 +126,7 @@ console.log(meuArray)
 
 // Não funciona para objeto
 const meuTeste = () => [1,2,3]
-
+console.log('Com Arrow function: ' + meuTeste());
 // Funciona
 const comReturn = () =>{
     return { nome: 'Objeto'}
@@ -134,19 +134,43 @@ const comReturn = () =>{
 
 // Assim funciona
 const comObj = () => ({ nome: 'Thuany' });
+console
 
-console.log(meuTeste());
 
 // Valores padrão para os parametros (valor padrão quando não passa todos os parametros)
 function somar(a = 3, b = 6){
     return a + b;
 }
 console.log(somar(1));
-console.log(soma());
+console.log(somar());
 
 const vouSomar = (a = 3, b = 6) => a + b;
 console.log(vouSomar(1));
 console.log(vouSomar());
+
+const meuUsuario = {
+    nome: 'Thuany',
+    idade: 22,
+    endereco: {
+        cidade: 'Franca',
+        estado: 'SP'
+    }
+}
+console.log(meuUsuario);
+// Faria assim:
+const nome = meuUsuario.nome;
+const cidade = meuUsuario.endereco.cidade;
+
+// Desestruturação
+// const { nome, idade, endereco: { cidade } } = meuUsuario;
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
+
+function mostraNome({nome, idade}){
+    console.log(nome, idade);
+}
+mostraNome(meuUsuario);
 
 
 

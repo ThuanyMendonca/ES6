@@ -175,8 +175,9 @@ console.log(meuArray); // Não funciona para objeto
 
 var meuTeste = function meuTeste() {
   return [1, 2, 3];
-}; // Funciona
+};
 
+console.log('Com Arrow function: ' + meuTeste()); // Funciona
 
 var comReturn = function comReturn() {
   return {
@@ -191,7 +192,7 @@ var comObj = function comObj() {
   };
 };
 
-console.log(meuTeste()); // Valores padrão para os parametros (valor padrão quando não passa todos os parametros)
+console; // Valores padrão para os parametros (valor padrão quando não passa todos os parametros)
 
 function somar() {
   var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
@@ -200,7 +201,7 @@ function somar() {
 }
 
 console.log(somar(1));
-console.log(soma());
+console.log(somar());
 
 var vouSomar = function vouSomar() {
   var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
@@ -210,3 +211,27 @@ var vouSomar = function vouSomar() {
 
 console.log(vouSomar(1));
 console.log(vouSomar());
+var meuUsuario = {
+  nome: 'Thuany',
+  idade: 22,
+  endereco: {
+    cidade: 'Franca',
+    estado: 'SP'
+  }
+};
+console.log(meuUsuario); // Faria assim:
+
+var nome = meuUsuario.nome;
+var cidade = meuUsuario.endereco.cidade; // Desestruturação
+// const { nome, idade, endereco: { cidade } } = meuUsuario;
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
+
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostraNome(meuUsuario);
